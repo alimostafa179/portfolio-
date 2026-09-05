@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Mostafa Ali — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+<div id="spotlight"></div>
+
+<div id="splash">
+  <p class="splash-greeting">Welcome</p>
+  <h1 class="splash-name gradient-text">Ali Mostafa Ali</h1>
+  <p class="splash-role">Junior Frontend Developer</p>
+  <p class="splash-hint">tap or scroll to enter</p>
+</div>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">Ali <span>Mostafa</span></div>
+    <div class="nav-right">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="hero">
+  <div class="wrap">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <img src="2025_09_28_01_45_47_IMG_1410.JPG" alt="Ali Mostafa Ali" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="fallback" style="display:none;">A</div>
+      </div>
+    </div>
+    <h1 class="name"><span class="gradient-text">Ali Mostafa Ali</span></h1>
+    <p class="role"><span id="typedRole"></span><span class="typed-cursor">&nbsp;</span></p>
+    <p class="desc">
+      Computer Science student focused on frontend web development, with hands-on project experience in React.js, JavaScript, and TypeScript. Also bring people skills built through customer service work.
+    </p>
+    <div class="hero-links">
+      <a href="#projects" class="btn btn-primary">View my projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="reveal">
+  <div class="wrap">
+    <h2>About <span>Me</span></h2>
+    <p>
+      I'm a Computer Science student focused on frontend web development, with hands-on experience building responsive web applications.
+      I'm skilled in React.js, JavaScript (ES6+), TypeScript, HTML5, CSS3, RESTful APIs, and Git, and comfortable with clean code and OOP fundamentals.
+      Before this, I worked in customer service roles at places like Buffalo Burger, Kemet, and BRGR, which taught me how to deal with people and work well under pressure.
+    </p>
+    <div class="about-meta">
+      <span>Qalyubia, Egypt</span>
+      <span>01001471931</span>
+      <a href="mailto:alielbelbasha@gmail.com">alielbelbasha@gmail.com</a>
+      <a href="https://github.com/alimostafa179" target="_blank" rel="noopener">github.com/alimostafa179</a>
+      <a href="www.linkedin.com/in/ali-mostafa179" target="_blank" rel="noopener">LinkedIn.com/ali-mostafa179</a>
+
+
+    </div>
+
+    <div class="edu">
+      <h3>Bachelor of Science in Computer Science</h3>
+      <p>Expected 2026 — Data Structures & Algorithms, Object-Oriented Programming (Java), Operating Systems, Software Engineering, Database Systems.</p>
+      <div class="certs">
+        <span class="cert">React JS</span>
+        <span class="cert">Modern JavaScript (ES6+)</span>
+        <span class="cert">TypeScript Fundamentals</span>
+        <span class="cert">Clean Code Principles</span>
+        <span class="cert">HTML & CSS Fundamentals</span>
+        <span class="cert">Business English Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="reveal">
+  <div class="wrap">
+    <h2>Technical <span>Skills</span></h2>
+
+    <div class="skill-group">
+      <h3>Core Skills</h3>
+      <div class="skill-bars">
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>JavaScript (ES6+)</span><span class="skill-pct">85%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:85%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>HTML5</span><span class="skill-pct">90%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:90%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>CSS3</span><span class="skill-pct">85%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:85%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>React.js</span><span class="skill-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:80%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>TypeScript</span><span class="skill-pct">75%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:75%"></div></div>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-bar-head"><span>Git & GitHub</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill reveal-fill" style="--pct:70%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Also Familiar With</h3>
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">React Hooks</span>
+        <span class="chip">State Management</span>
+        <span class="chip">CSS Modules</span>
+        <span class="chip">Responsive Design</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Web Development</h3>
+      <div class="chips">
+        <span class="chip">RESTful APIs</span>
+        <span class="chip">Async Programming</span>
+        <span class="chip">DOM Manipulation</span>
+        <span class="chip">Local Storage</span>
+      </div>
+    </div>
+
+    <div class="skill-group">
+      <h3>Core Engineering & Tools</h3>
+      <div class="chips">
+        <span class="chip">OOP</span>
+        <span class="chip">Clean Code</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Agile Basics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="wrap">
+    <h2><span>Projects</span> I've Worked On</h2>
+
+    <div class="project reveal" style="--i:0">
+      <h3>E-Commerce Web Application</h3>
+      <p>A responsive single-page e-commerce interface with product catalog filtering and search, built using asynchronous JavaScript and external REST APIs. TypeScript interfaces model the payloads for more reliable code.</p>
+      <div class="tags"><span class="tag">React.js</span><span class="tag">TypeScript</span><span class="tag">REST API</span></div>
+    </div>
+
+    <div class="project reveal" style="--i:1">
+      <h3>Interactive Task Management Dashboard</h3>
+      <p>A dynamic task tracking app using modern ES6+ DOM manipulation and browser local storage, applying OOP and Clean Code principles (DRY, SOLID) with responsive Grid and Flexbox layouts.</p>
+      <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+    </div>
+
+    <div class="project reveal" style="--i:2">
+      <h3>Online Marketplace</h3>
+      <p>A marketplace-style website with product listings, category browsing, and a shopping cart, built from scratch with plain HTML, CSS, and JavaScript — no frameworks.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <div class="wrap">
+    <h2><span>Get in</span> Touch</h2>
+    <p>Looking for a Junior Frontend Developer opportunity — if you have one, or just want to talk, send me a message.</p>
+
+    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xjyvebgv" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+
+    <div class="contact-row">
+      <a href="mailto:alielbelbasha@gmail.com" class="btn btn-ghost">Email Me</a>
+      <a href="Ali_Mostafa_Ali_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Ali Mostafa Ali. All rights reserved.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
