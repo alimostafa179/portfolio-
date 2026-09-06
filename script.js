@@ -1,4 +1,15 @@
+// ---- Avatar fallback (moved out of inline HTML for CSP compliance) ----
+(function () {
+  const img = document.getElementById('avatarImg');
+  if (!img) return;
+  img.addEventListener('error', () => {
+    img.style.display = 'none';
+    const fallback = img.nextElementSibling;
+    if (fallback) fallback.style.display = 'flex';
+  });
+})();
 
+// ---- Dark / light theme toggle ----
 (function () {
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('theme');
@@ -21,6 +32,7 @@
   });
 })();
 
+// ---- Particle network background ----
 (function () {
   const canvas = document.getElementById('particles');
   if (!canvas) return;
@@ -82,6 +94,7 @@
   window.addEventListener('resize', () => { resize(); makeParticles(); });
 })();
 
+// ---- Cursor spotlight (pointer devices only) ----
 (function () {
   const spotlight = document.getElementById('spotlight');
   if (!spotlight || !window.matchMedia('(pointer: fine)').matches) return;
@@ -95,6 +108,7 @@
   });
 })();
 
+// ---- Magnetic buttons + 3D project tilt (pointer devices only) ----
 (function () {
   if (!window.matchMedia('(pointer: fine)').matches) return;
 
@@ -119,6 +133,7 @@
   });
 })();
 
+// ---- Welcome splash screen ----
 const splash = document.getElementById('splash');
 const hero = document.getElementById('hero');
 document.body.style.overflow = 'hidden';
@@ -173,6 +188,7 @@ if (splash) {
   startTypewriter();
 }
 
+// ---- Highlights the nav link for the section currently in view ----
 const sections = document.querySelectorAll('section[id], header.hero[id]');
 const navLinks = document.querySelectorAll('nav a');
 
@@ -189,6 +205,7 @@ const navObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => navObserver.observe(section));
 
+// ---- Fades sections in as they scroll into view (once each) ----
 const revealTargets = document.querySelectorAll('.reveal');
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -202,6 +219,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealTargets.forEach((el) => revealObserver.observe(el));
 
+// ---- Animate skill bars when scrolled into view ----
 const skillFills = document.querySelectorAll('.reveal-fill');
 const skillObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -213,6 +231,7 @@ const skillObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 skillFills.forEach((el) => skillObserver.observe(el));
 
+// ---- Scroll progress bar ----
 const progressBar = document.getElementById('progressBar');
 window.addEventListener('scroll', () => {
   const scrollTop = document.documentElement.scrollTop;
@@ -221,6 +240,7 @@ window.addEventListener('scroll', () => {
   if (progressBar) progressBar.style.width = pct + '%';
 });
 
+// ---- Toast helper ----
 function showToast(message) {
   let toast = document.getElementById('toast');
   if (!toast) {
@@ -234,6 +254,7 @@ function showToast(message) {
   toast._hideTimer = setTimeout(() => toast.classList.remove('show'), 2600);
 }
 
+// ---- Contact form submission (Formspree) ----
 (function () {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
@@ -263,6 +284,7 @@ function showToast(message) {
   });
 })();
 
+// ---- Email links: also copy the address, in case no mail app opens ----
 document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
   link.addEventListener('click', () => {
     const email = link.getAttribute('href').replace('mailto:', '').split('?')[0];
