@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ali Mostafa Ali — Junior Frontend Developer</title>
 
-<!-- SEO -->
 <meta name="description" content="Portfolio of Ali Mostafa Ali, a Junior Frontend Developer and Computer Science student skilled in HTML, CSS, JavaScript, SQL, C#, and C++.">
 <meta name="author" content="Ali Mostafa Ali">
 
@@ -27,6 +26,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,7 +45,20 @@
 
 <nav>
   <div class="wrap">
-    <div class="brand">Ali <span> Mostafa</span></div>
+    <div class="brand">
+      <svg class="brand-logo" viewBox="0 0 40 40" width="32" height="32" aria-hidden="true">
+        <rect x="1" y="1" width="38" height="38" rx="11" fill="url(#navLogoGrad)"/>
+        <text x="20" y="26" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="15" fill="#0B0B14">AM</text>
+        <defs>
+          <linearGradient id="navLogoGrad" x1="0" y1="0" x2="40" y2="40">
+            <stop offset="0" stop-color="#39FF88"/>
+            <stop offset="0.5" stop-color="#FFD23F"/>
+            <stop offset="1" stop-color="#FF2E9A"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      Ali <span> Mostafa</span>
+    </div>
     <div class="nav-right">
       <ul>
         <li><a href="#about">About</a></li>
@@ -91,7 +104,7 @@
       <span>01001471931</span>
       <a href="mailto:alielbelbasha@gmail.com">alielbelbasha@gmail.com</a>
       <a href="https://github.com/alimostafa179" target="_blank" rel="noopener">github.com/alimostafa179</a>
-      <a href="www.linkedin.com/in/ali-mostafa179" target="_blank" rel="noopener">LinkedIn.com/ali-mostafa179</a>
+      <a href="https://www.linkedin.com/in/ali-mostafa179" target="_blank" rel="noopener">LinkedIn.com/ali-mostafa179</a>
 
 
     </div>
@@ -149,15 +162,35 @@
     <h2><span>Projects</span> I've Worked On</h2>
 
     <div class="project reveal" style="--i:0">
+      <div class="project-img">
+        <img src="Dashboard.jpg" alt="Interactive Task Management Dashboard screenshot" loading="lazy">
+        <div class="project-img-fallback">Add image: project-task-dashboard.jpg</div>
+      </div>
       <h3>Interactive Task Management Dashboard</h3>
       <p>A dynamic task tracking app using modern ES6+ DOM manipulation and browser local storage, with responsive Grid and Flexbox layouts.</p>
       <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span></div>
+      <div class="project-links">
+        <a href="https://alimostafa179.github.io/Dashboard/" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
     </div>
 
     <div class="project reveal" style="--i:1">
+      <div class="project-img">
+        <img src="markt.jpg" alt="Online Marketplace screenshot" loading="lazy">
+        <div class="project-img-fallback">Add image: project-online-marketplace.jpg</div>
+      </div>
       <h3>Online Marketplace</h3>
       <p>A marketplace-style website with product listings, category browsing, and a shopping cart, built from scratch with plain HTML, CSS, and JavaScript — no frameworks.</p>
       <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+      <div class="project-links">
+        <a href="https://alimostafa179.github.io/Online-Marketplace/" target="_blank" rel="noopener" class="project-link">
+          <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+          GitHub
+        </a>
+      </div>
     </div>
   </div>
 </section>
