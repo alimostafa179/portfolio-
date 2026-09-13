@@ -9,24 +9,35 @@
   });
 })();
 
+// ---- Project image fallback (shows a placeholder note if the image file is missing) ----
+(function () {
+  document.querySelectorAll('.project-img img').forEach((img) => {
+    img.addEventListener('error', () => {
+      img.setAttribute('data-broken', 'true');
+    });
+  });
+})();
+
 // ---- Dark / light theme toggle ----
 (function () {
   const toggle = document.getElementById('themeToggle');
   const saved = localStorage.getItem('theme');
-  if (saved === 'light') {
-    document.documentElement.setAttribute('data-theme', 'light');
+  if (saved === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
     if (toggle) toggle.textContent = '☀️';
+  } else if (toggle) {
+    toggle.textContent = '🌙';
   }
   if (!toggle) return;
   toggle.addEventListener('click', () => {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    if (isLight) {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    if (isDark) {
       document.documentElement.removeAttribute('data-theme');
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem('theme', 'light');
       toggle.textContent = '🌙';
     } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
       toggle.textContent = '☀️';
     }
   });
